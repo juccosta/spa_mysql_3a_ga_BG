@@ -58,7 +58,7 @@ app.put("/alunos/:id",(req,res)=>{
     const {id} = req.params
     const {nome, email, curso} = req.body
 
-    const sql = "UPDATE alunos SET nome=?, email=?, curso=? WHERE id=?"
+    const sql = `UPDATE alunos SET nome=?, email=?, curso=? WHERE id=?`
     conexao.query(
         sql,
         [nome,email,curso,id],
@@ -75,7 +75,7 @@ app.put("/alunos/:id",(req,res)=>{
 
 app.delete("/alunos/:id",(req,res)=>{
     const {id} = req.params
-    const sql = "DELETE FROM alunos WHERE id=?"
+    const sql = `DELETE FROM alunos WHERE id=?`
 
     conexao.query(
         sql,

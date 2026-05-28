@@ -92,7 +92,7 @@ function App(){
       <hr/>
 
       {
-  alunos.maps((aluno)=>(
+  alunos.map((aluno)=>(
     <div key={aluno.id}>
       <h3>{aluno.nome}</h3>
       <p>{aluno.email}</p>
